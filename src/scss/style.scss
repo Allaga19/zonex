@@ -1,0 +1,43 @@
+@charset "utf-8";
+/*=====================================================
+* Название проекта: 
+    Автор: Алла Гаврюшина
+    Copyright (c) 2019 ...
+=====================================================*/
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ и ГОТОВЫХ КЛАССОВ>
+@import "global.scss";
+@import "fonts.scss";
+@import "mexin.scss";
+@import "forms.scss";
+// @import "components/carousel.scss";
+// @import "modal.scss";
+// @import "upbutton.scss";
+@import "ui.scss";
+
+// <ПОДКЛЮЧЕНИЕ СТОРОННИХ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+// @import "vendor/libs.scss";
+// @import "swiper.scss";
+// @import "slick.scss";
+// @import "slick-theme.scss";
+// @import '../../../node_modules/slick-slider/slick/slick.scss';
+// @import '../../node_modules/slick-slider/slick/slick.scss';
+// </ПОДКЛЮЧЕНИЕ СТОРОННИХ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+@import "bloks/_header.scss";
+@import "bloks/sections/_head.scss";
+// @import "bloks/sections/_carousel.scss";
+// @import "bloks/_footer.scss";
+
+
+// </ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+// .page {
+//     flex: 1 1 auto;
+// }
+
+
+
+
+
+
+

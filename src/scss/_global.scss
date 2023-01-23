@@ -1,0 +1,232 @@
+// Шрифты по умочанию
+$fontfamily: 'Roboto-Regular', 'Arial', 'sans-serif';
+// .text {
+//   font-family: serif;
+ 
+// }
+// Вычесление процентов для блока ,например
+// .block {
+//     width: 300px / 960px * 100%;  // 31.25%
+// }
+// </Вычесление процентов для блока ,например>
+$white:#fff;
+$black:#000;
+$grey:#676d6a;
+// $hover: #2B4074;
+$accent: #2B4074;
+// $logo: #0c252d;
+$subtitle: #c3c3c3; 
+$color-text: #adadad;
+$default-color: #9B9B9B; // общий цвет для шрифтов
+// $border: #fe8682;
+// $bg-section: #f2f2f2;
+// $color-btntop: #c3a774;
+// $color-a: #0b5b45;
+$section-title: #868686;
+//=============== <ПЕРЕМЕННЫЕ>
+$minwidth:320px;
+$mw:1440;
+$md1:$mw+15px;
+$md2:991.98;
+$md3:767.98px;
+$md4:479.98;
+
+// @media (max-width: $md3+px)  {}
+// </ПЕРЕМЕННЫЕ>
+//============== <MICSINI>============
+//  @include Montserrat(); in scss
+@mixin robotoR() {
+  font-family: "Roboto-Regular",
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin robotoM() {
+  font-family: "Roboto-Medium",
+  sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+@mixin robotoCR() {
+  font-family: "RobotoCondensed-Regular",
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin robotoCB() {
+	font-family: 'RobotoCondensed-Bold';
+	font-style: normal;
+	font-weight: 00;
+}
+@mixin DosisL() {
+  font-family: 'Dosis-Light';
+  font-style: normal;
+  font-weight: 00;
+}
+@mixin DosisM() {
+  font-family: 'Dosis-Medium';
+  font-style: normal;
+  font-weight: 00;
+}
+// @mixin coverdiv() {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 103px;
+//   height: 100%;
+// }
+
+//============== </MICSINI>============
+
+// <ОБНУЛЕНИЕ>
+@import "null.scss";
+body {
+  font-size: 16px;
+  line-height: 18px;
+  // overflow: hidden;
+  min-width: 320px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  // background-color: #f6fcfc;
+  // color: $default-color;
+  &.no-scroll {
+    overflow: hidden;
+    // @media (max-width: $md3+px) {
+    //   // width: 100%;
+    //   // position: fixed;
+    //   // overflow: hidden;
+    // }
+  }
+}
+// <ОБОЛОЧКА>
+// h1 {
+//   // @include textB();
+// }
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+h2 {
+  // @include textM();
+  font-size: 28px;
+  line-height: 48px;
+}
+// h3 {
+// }
+// h4 {
+//   // font-size: 13px;
+// }
+p {
+  // @include textL();
+  // margin-bottom: 15px;
+  color: $color-text;
+//   @media (max-width:$md3+px) {
+//     font-size: 18px;
+//   }
+}
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  // &.loaded {}
+}
+
+.-container {
+	// max-width: $md2+px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 20px;
+	@media (min-width: $minwidth) {
+		padding: 0 20px;
+	}
+	@media (min-width: 640px) {
+		padding: 0 30px;
+	}
+	@media (min-width: $md3) {
+		padding: 0 40px;
+	}
+	@media (min-width: 1024px) {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 40px;
+	}
+	@media (min-width: 1440px) {
+		max-width: 1320px;
+	}
+}
+.section {
+	text-align: center;
+// box-shadow: 0 0 15px 0 rgba(0,4,7,.15);
+// @media (max-width: $md3+px) {
+//   padding: 70px 0 70px 0;
+// }
+// @media (max-width: $md3+px) {
+//   padding: 50px 0 50px 0;
+// }
+}
+.content-modal__title,
+.section__title {
+  text-align: center; 
+  display: inline-block;
+  margin: 0 auto 60px auto;
+  // letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $section-title;
+  border-bottom: 1px solid $color-text;
+//   &-two {
+//     // color: $hover;
+//   }
+//   @media (max-width:$md3+px) {
+    font-size: 25px;
+    // line-height: 28px;
+    // margin-bottom: 50px;
+//   }
+  // @media (max-width:$md4+px) {
+  //   margin-bottom: 30px;
+  // }
+}
+.subtitle {
+  // @include textL();
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-text;
+  max-width: 550px;
+}
+
+// <ibg>
+._ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+	img {
+		display: none;
+		width: 100%;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+// <ibg>
+
+// </ОБОЛОЧКА>
+
+
