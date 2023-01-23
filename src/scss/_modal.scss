@@ -1,0 +1,116 @@
+// .modal {
+//   display: none;
+//   width: 100%;
+//   height: 100%;
+//   padding: 15px;
+//   background-color: rgba($black, 0.8);
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 1000;
+//   overflow: auto; // Чтобы появился скрол с боку , если будет слишком длинный текст
+//   &.show {
+//     @include flexbox();
+//   }
+//   &__dialog {
+//     width: 100%;
+//     max-width: 1200px;
+//     margin: auto;
+//     position: relative;
+//     background-color: $white;
+//     transform: rotateX(90deg);  // Анимация
+//     transition: transform .2s linear;  // Анимация
+//     &--sm {
+//       max-width: 900px;
+//     }
+//   }
+//   &__close {
+//     width: 34px;
+//     height: 34px;
+//     padding: 0;
+//     background: none;
+//     border: 0;
+//     position: absolute;
+//     top: 13px;
+//     right: 13px;
+//     z-index: 1;
+//     transition: transform .2s linear;
+//     &:hover {
+//       transform: rotate(90deg);
+//     }
+//   }
+//   &__order {
+//     max-width: 250px;
+//     margin: 0 auto;
+//     top: 25%;
+//   }
+// }
+// .modal-work {
+//   @include flexbox();
+//   justify-content: space-between;
+//   &__preview {
+//     width: 60%;
+//     position: relative;
+//     overflow: hidden; // Скрываем лишнее у картинки
+//   }
+//   &__image {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     top: 50%;
+//     left: 50%;
+//     z-index: 1;
+//     transform: translate3d(-50%, -50%, 0);
+//     & img {
+//       width: 100%;
+//     }
+//   }
+// }
+// .content-modal {
+//   padding: 3rem 1rem;
+//   width: 40%;
+//   &__title {
+//     margin-bottom: 30px;
+//   }
+//   &__items {
+//     margin-bottom: 20px;
+//   }
+//   &__subtitle {
+//     margin-bottom: 15px;
+//   }
+//   &__text {
+//     // margin-bottom: 8.66rem;
+//     font-size: 14px;
+//     color: $grey;
+//     line-height: 18px;
+//     font-weight: 300;
+//   }
+//   &__btns {
+//     @include flexbox();
+//     justify-content: space-between;
+//     & .btn {
+//     font-size: 14px;
+//     line-height: 20px;
+//     }
+//   }
+// }  
+// //================= ORDER ===========
+// .order {
+//   display: none;
+//   &__dialog {
+//     width: 100%;
+//     max-width: 500px;
+//     margin: auto;
+//     position: relative;
+//     background-color: inherit;
+//     transform: rotateX(90deg);  // Анимация
+//     transition: transform .2s linear;  // Анимация
+//   }
+//   &__content {
+//     background-color: $white;
+//     padding: 60px 0;
+//   }
+//   & form {
+//     background: $color-a;
+//   }
+// }

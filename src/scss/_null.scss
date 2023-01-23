@@ -1,0 +1,132 @@
+// <ОБНУЛЕНИЕ,ОБЩИЕ ПАРАМЕТРЫ>
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	bottom: 0;
+}
+*,
+*::before,
+*::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth; //плавный скрол на якорь
+}
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: $minwidth;
+	position: relative;
+	// width:100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
+}
+body {
+	font-size: 100%;
+	font-family: $fontfamily;
+	-ms-text-size-adjust: 100%;
+	-moz-tezt-size-adjust: 100%;
+	&.lock {
+		overflow: hidden;
+		// @media (max-width:$md3+px) {
+		//   width: 100%;
+		//   position: fixed;
+		//   overflow: hidden;}
+	}
+}
+input,
+select {
+	vertical-align: middle;
+}
+input,
+button,
+textarea {
+	font-family: $fontfamily;
+}
+input::-ms-clear {
+	display: none;
+}
+input,
+input:hover,
+input:focus,
+input:active,
+button,
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+}
+button {
+	cursor: pointer;
+	border: none;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	bottom: 0;
+}
+a,
+button,
+input {
+	transition: all 0.5s ease;
+}
+a {
+	display: block;
+	text-decoration: none;
+	outline: none; /* убирает обводку при фокусе*/
+	font-size: 100%;
+	color: inherit; /* принимает цвет родителя*/
+}
+a:focus,
+a:active {
+	outline: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover,
+a:active {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+img {
+	vertical-align: top;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+	margin: 0;
+}
+
+// //</ОБНУЛЕНИЕ,ОБЩИЕ ПАРАМЕТРЫ>
