@@ -1,97 +1,67 @@
-// E:\My document\Создание сайта\вёрстка\Прокапчук Вадим от 0 до 1\Mobile first метод. Верстка сайта htmlcss. Адаптивная верстка\di-gi
 .header {
-	background-color: $accent;
-	// .header__inner
-	&__inner {
-		min-width: 80px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		@media (min-width: 640px) {
-			min-height: 100px;
+		// .header__container
+		&__container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 23px 0;
 		}
-	}
-	.logo {
-	// .logo__link
+		// .header__nav
+		&__nav {}
+		// .header__logo
+		&__logo {}
+}
+.nav {
+		// .nav__list
+		&__list {
+			display: flex;
+		}
+		// .nav__item
+		&__item {
+			&:not(:last-child) {
+				margin-right: 45px;
+			}
+		}
+		// .nav__link
 		&__link {
-			margin: 7px 0 7px 7px;
-			@media (min-width: 640px) {
-				margin-left: 17px;
+			position: relative;
+			font-size: 15px;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 2px;
+				background-color: $dark;
+				opacity: 0;
+				transition: opacity 0.15s;
 			}
-			@media (min-width: $md3) {
-				margin-left: 0;
+			&:hover {
+				&::before {
+					opacity: 1;
+				transition: opacity 0.15s;
+				}
+			}
+			&--current {
+				&::before {
+				opacity: 1;
+				transition: opacity 0.15s;
+				}
 			}
 		}
-	}
-	.menu__btn{
-		width: 40px;
-		height: 40px;
-		border-radius: 3px;	
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		-ms-border-radius: 3px;
-		-o-border-radius: 3px;
-		background-color: $white;
-		position: relative;
-		&::after {
- 			content: "";
-			width: 12px;
-			height: 2px;
-			border-right: 1px;
-			background-color: $accent;
-			position: absolute;
-			top: 15px;
-			left: 14px;
-			box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent;
-		}
-		@media (min-width: 1440px) {
-			margin-right: 90px;
-		}
+}
+.logo {
+	display: inline-block;
+	width: 117px;
+	height: 22px;
+	svg {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		fill: $dark;
+		object-fit: cover;
 	}
 }
-                
 
-// .icon-menu {
-// 	// display: none;
-// 	@media (max-width: $md3+px) {
-// 		position: fixed;
-// 		top: 0;
-// 		right: 0;
-// 		margin-top: 25px;
-// 		margin-right: 25px;
-// 		width: 30px;
-// 		height: 18px;
-// 		cursor: pointer;
-// 		z-index: 5;
-// 		span {
-// 			@include anim(0.3s, 0s);
-// 			top: calc(50% - 1px);
-// 			left: 0;
-// 			position: absolute;
-// 			width: 100%;
-// 			height: 2px;
-// 			background-color: $accent;
-// 			&:first-child {
-// 				top: 0px;
-// 			}
-// 			&:last-child {
-// 				top: auto;
-// 				bottom: 0px;
-// 			}
-// 		}
-// 		&.active {
-// 			span {
-// 				@include scale(0);
-// 				background-color: $accent;
-// 				&:first-child {
-// 					@include rotate(-45deg);
-// 					top: 8px;
-// 				}
-// 				&:last-child {
-// 					@include rotate(45deg);
-// 					bottom: 8px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+// 24;25

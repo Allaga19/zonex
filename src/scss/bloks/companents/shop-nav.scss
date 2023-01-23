@@ -1,0 +1,36 @@
+.shop-nav {
+  display: flex;
+	align-items: center;
+  // .shop-nav__item
+  &__item {
+  }
+  // .shop-nav__search-form
+  &__search-form {
+  }
+  // .shop-nav__link
+  &__link {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		&--user {
+			background-image: url("../../../img/header/user.png");
+		}
+  }
+}
+.header {
+  // .header__shop-nav
+  &__shop-nav {
+  }
+}
+.search-form {
+  // .search-form__btn
+  &__btn {
+  }
+}
+.btn-reset {
+}
+.cart {
+  // .cart__quantity
+  &__quantity {
+  }
+}

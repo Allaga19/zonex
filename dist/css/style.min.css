@@ -51,7 +51,7 @@ body {
 
 body {
   font-size: 100%;
-  font-family: "Roboto-Regular", "Arial", "sans-serif";
+  font-family: "Jost", "sans-serif";
   -ms-text-size-adjust: 100%;
   -moz-tezt-size-adjust: 100%;
 }
@@ -67,7 +67,7 @@ select {
 input,
 button,
 textarea {
-  font-family: "Roboto-Regular", "Arial", "sans-serif";
+  font-family: "Jost", "sans-serif";
 }
 
 input::-ms-clear {
@@ -155,6 +155,8 @@ body {
   min-width: 320px;
   font-weight: 400;
   letter-spacing: 0.01em;
+  background-color: #fff;
+  color: #151515;
 }
 body.no-scroll {
   overflow: hidden;
@@ -172,17 +174,7 @@ h2 {
 }
 
 p {
-  color: #adadad;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
+  color: #151515;
 }
 
 .wrapper {
@@ -195,7 +187,7 @@ hr {
 .-container {
   margin: 0 auto;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 @media (min-width: 320px) {
   .-container {
@@ -236,7 +228,7 @@ hr {
   margin: 0 auto 60px auto;
   text-transform: uppercase;
   color: #868686;
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #151515;
   font-size: 25px;
 }
 
@@ -245,7 +237,7 @@ hr {
   margin: 0 auto;
   font-size: 18px;
   line-height: 26px;
-  color: #adadad;
+  color: #151515;
   max-width: 550px;
 }
 
@@ -283,57 +275,51 @@ hr {
 /*</BUTTONS>===========================================================*/
 /* <FORM>==================================*/
 /* </FORM>=================================*/
-.header {
-  background-color: #2B4074;
-}
-.header__inner {
-  min-width: 80px;
+.header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 23px 0;
 }
-@media (min-width: 640px) {
-  .header__inner {
-    min-height: 100px;
-  }
+.nav__list {
+  display: flex;
 }
-.header .logo__link {
-  margin: 7px 0 7px 7px;
+.nav__item:not(:last-child) {
+  margin-right: 45px;
 }
-@media (min-width: 640px) {
-  .header .logo__link {
-    margin-left: 17px;
-  }
-}
-@media (min-width: 767.98px) {
-  .header .logo__link {
-    margin-left: 0;
-  }
-}
-.header .menu__btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  background-color: #fff;
+.nav__link {
   position: relative;
+  font-size: 15px;
 }
-.header .menu__btn::after {
+.nav__link::before {
   content: "";
-  width: 12px;
-  height: 2px;
-  border-right: 1px;
-  background-color: #2B4074;
   position: absolute;
-  top: 15px;
-  left: 14px;
-  box-shadow: 0 4px 0 0 #2B4074, 0 8px 0 0 #2B4074;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #151515;
+  opacity: 0;
+  transition: opacity 0.15s;
 }
-@media (min-width: 1440px) {
-  .header .menu__btn {
-    margin-right: 90px;
-  }
+.nav__link:hover::before {
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+.nav__link--current::before {
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.logo {
+  display: inline-block;
+  width: 117px;
+  height: 22px;
+}
+.logo svg {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  fill: #151515;
+  object-fit: cover;
 }
